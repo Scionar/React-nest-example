@@ -8,7 +8,11 @@
 
 		// Render component if found from library.
 		if (component) {
-			const renderedComponent = React.createElement(component, {}, componentChildren);
+			const renderedComponent = React.createElement(
+				component,
+				componentData,
+				componentChildren
+			);
 			ReactDOM.render(renderedComponent, domContainer);
 		}
 	});
